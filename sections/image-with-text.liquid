@@ -1,31 +1,23 @@
 <div class="image-with-text section">
-  <img src="{{ section.settings.image | img_url: 'master'}}" alt="">
-  <div class="description">
-    <h2>{{ section.settings.title }}</h2>
-  </div>
+  <h2>{{ section.settings.cta_text_test }}</h2>
 </div>
 
-{{ section.settings.custom_liquid }}
 {% schema %}
   {
-    "name": "Image with text",
-    "tag": "section",
-    "class": "section",
+    "name": "Call to Actions",
+    "class": "index-section index-section--flush",
     "settings": [
       {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image"
-      }, {
+        "id": "cta_text_test",
         "type": "text",
-        "id": "title",
-        "label": "Heading",
-        "default": "El titulo"
+        "label": "CTA 1 Title",
+        "default": "Dryups Specials"
       }
     ],
     "presets": [
       {
-        "name": "Image with text"
+        "name": "Call to Actions",
+        "category": "Text"
       }
     ]
   }
