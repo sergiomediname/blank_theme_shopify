@@ -1,0 +1,30 @@
+<div class="image-with-text section">
+  <img src="{{ section.settings.image | img_url: 'master'}}" alt="">
+  <div class="description">
+    <h2>{{ section.settings.title }}</h2>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image with text",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "El titulo"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image with text",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
