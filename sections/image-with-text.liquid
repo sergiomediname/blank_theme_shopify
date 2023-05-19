@@ -5,9 +5,12 @@
   </div>
 </div>
 
+{{ section.settings.custom_liquid }}
 {% schema %}
   {
     "name": "Image with text",
+    "tag": "section",
+    "class": "section",
     "settings": [
       {
         "type": "image_picker",
@@ -22,8 +25,7 @@
     ],
     "presets": [
       {
-        "name": "Image with text",
-        "category": "Image"
+        "name": "Image with text"
       }
     ]
   }
