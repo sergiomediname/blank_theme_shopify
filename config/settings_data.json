@@ -17,10 +17,16 @@
         "settings": {
           "title": ""
         }
+      },
+      "e726a21f-6150-4213-9792-2fb3a33def03": {
+        "type": "index-section-main-banner",
+        "settings": {
+          "title": "Lorem ipsum"
+        }
       }
     },
     "content_for_index": [
-
+      "e726a21f-6150-4213-9792-2fb3a33def03"
     ]
   }
 }
