@@ -72,10 +72,14 @@ select {
   }
 }
 .container {
-  max-width: 1400px;
   width: 100%;
   padding: 0 1rem;
   margin: auto;
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 1400px;
+  }
 }
 
 .flex {
@@ -97,6 +101,18 @@ select {
   width: var(--svg-size, 18px);
   height: var(--svg-size, 18px);
   fill: currentColor;
+}
+
+.navbar .nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 350px;
+  background-color: red;
 }
 
 /*# sourceMappingURL=main.css.map */
