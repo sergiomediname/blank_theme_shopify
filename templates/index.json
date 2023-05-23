@@ -1,15 +1,19 @@
 {
-    "sections": {
-        "main": {
-            "type": "index-section-test",
-            "disabled": true
-        },
-        "section-main-banner": {
-            "type": "index-section-main-banner"
-        }
+  "sections": {
+    "main": {
+      "type": "index-section-test",
+      "disabled": true,
+      "settings": {
+      }
     },
-    "order": [
-        "main",
-        "section-main-banner"
-    ]
+    "section-main-banner": {
+      "type": "index-section-main-banner",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section-main-banner"
+  ]
 }
