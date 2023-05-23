@@ -1,0 +1,10 @@
+{
+    "section": {
+        "main": {
+            "type": "image-with-text"
+        }
+    },
+    "order": [
+        "main"
+    ]
+}
