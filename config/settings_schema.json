@@ -3,6 +3,10 @@
         "name": "Setting",
         "settings": [
             {
+                "type": "header",
+                "content": "Header"
+            },
+            {
                 "type": "color",
                 "id": "header_bg",
                 "label": "Background Header",
