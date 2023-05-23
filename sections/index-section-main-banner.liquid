@@ -2,6 +2,7 @@
 <div class="main-banner">
   <div class="content-inner">
     <h1>{{ item.title }}</h1>
+    {{ item.image | image_url: width: 1920 | image_tag }}
   </div>
 </div>
 
@@ -14,6 +15,10 @@
         "type": "text",
         "id": "title",
         "label": "Título"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Imagen"
       }
     ],
     "presets": [
