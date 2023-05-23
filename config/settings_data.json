@@ -1,3 +1,26 @@
 {
-  "current": {}
+  "current": {
+    "sections": {
+      "image-with-text": {
+        "type": "image-with-text",
+        "blocks": {
+          "3431e14c-d92a-42f3-bf24-d9edc74df158": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/wax-special.png"
+            }
+          }
+        },
+        "block_order": [
+          "3431e14c-d92a-42f3-bf24-d9edc74df158"
+        ],
+        "settings": {
+          "title": ""
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
 }
