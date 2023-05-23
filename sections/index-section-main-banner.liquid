@@ -1,0 +1,20 @@
+{% assign item = section.settings %}
+<div class="main-banner">
+  <div class="content-inner">
+    <h1>{{ item.title }}</h1>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Block",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Título"
+      }
+    ]
+  }
+{% endschema %}

@@ -3,9 +3,13 @@
         "main": {
             "type": "index-section-test",
             "disabled": true
+        },
+        "section-main-banner": {
+            "type": "index-section-main-banner"
         }
     },
     "order": [
-        "main"
+        "main",
+        "section-main-banner"
     ]
 }
