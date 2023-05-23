@@ -8,41 +8,31 @@
   </head>
 
   <body>
-	<div id="wrapper">
-		<div id="header">
-			<h1>{{ shop.name }}</h1>
-			<div id="top-nav">
-				<div class="menu">
-					<ul class="menu">
+	<header class="header">
+		<div class="container">
+			<div class="wrap">
+				<h1>{{ shop.name }}</h1>
+				<div class="navbar">
+					<ul class="nav">
 						{% for link in linklists.main-menu.links %}
-							<li class="menu-item">
+							<li class="nav__item">
 								<a href="{{ link.url }}">{{ link.title }}</a>
 							</li>
 						{% endfor %}
 					</ul>
 				</div>
-				<div id="cart">
-					<h3>Shopping Cart</h3>
-					<p class="cart-count">
-						{% if cart.item_count == 0 %}
-							Your cart is currently empty
-						{% else %}
-							{{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }}
-							<span>-</span>
-							Total: {{ cart.total_price | money_with_currency }}
-							<span>-</span>
-							<a href="/cart">View Cart</a>
-						{% endif %}
-					</p>
-				</div>
 			</div>
 		</div>
-        <!-- #header -->
+	</header>
 
-        <div class="content">
-          {{ content_for_layout }}
-        </div>
-        <!-- .content -->
-      </div><!-- #wrapper --></body>
+	<main class="main">
+		<div class="container">
+			<div class="wrap">
+				{{ content_for_layout }}
+			</div>
+		</div>
+	</main>
+
+	</body>
   </body>
 </html>
