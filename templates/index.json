@@ -13,7 +13,8 @@
     "section-main-banner": {
       "type": "index-section-main-banner",
       "settings": {
-        "title": "Lorem ipsum"
+        "title": "Lorem ipsum",
+        "image": "shopify:\/\/shop_images\/theme_cover_image.jpg"
       }
     }
   },

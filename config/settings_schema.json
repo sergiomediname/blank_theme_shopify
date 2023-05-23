@@ -1,39 +1,39 @@
 [
-    {
-        "name": "Setting",
-        "settings": [
-            {
-                "type": "header",
-                "content": "Header"
-            },
-            {
-                "type": "color",
-                "id": "header_bg",
-                "label": "Background Header",
-                "default": "#000000"
-            },
-            {
-                "type": "checkbox",
-                "id": "header_bg_transparent",
-                "label": "Header background transparent",
-                "default": true
-            },
-            {
-                "type": "header",
-                "content": "Menu"
-            },
-            {
-                "type": "color",
-                "id": "menu_bg",
-                "label": "Background Menu",
-                "default": "#FFFFFF"
-            },
-            {
-                "type": "color",
-                "id": "menu_color",
-                "label": "Color Menu",
-                "default": "#000000"
-            }
-        ]
-    }
+  {
+    "name": "Setting",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "color",
+        "id": "header_bg",
+        "label": "Background Header",
+        "default": "#000000"
+      },
+      {
+        "type": "checkbox",
+        "id": "header_bg_transparent",
+        "label": "Header background transparent",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Menu"
+      },
+      {
+        "type": "color",
+        "id": "menu_bg",
+        "label": "Background Menu",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "menu_color",
+        "label": "Color Menu",
+        "default": "#000000"
+      }
+    ]
+  }
 ]
