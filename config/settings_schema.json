@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "name": "Setting",
+        "settings": [
+            {
+                "type": "color",
+                "id": "header_bg",
+                "label": "Background Header",
+                "default": "#000000",
+                "info": "Background color Header"
+            }
+        ]
+    }
+]
