@@ -1,7 +1,8 @@
 {
     "section": {
         "main": {
-            "type": "index-section-test"
+            "type": "index-section-test",
+            "disabled": true
         }
     },
     "order": [
