@@ -82,6 +82,11 @@ select {
   }
 }
 
+.container-fluid {
+  width: 100%;
+  padding: 0 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -95,6 +100,21 @@ select {
 }
 .justify-between {
   justify-content: space-between;
+}
+
+.px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-1\/2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .i {
