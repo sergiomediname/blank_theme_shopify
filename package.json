@@ -1,0 +1,21 @@
+{
+  "name": "blank_theme_shopify",
+  "version": "1.0.0",
+  "description": "Based on [Blankify by Colin Nederkoorn](https://github.com/sud0n1m/blankify-for-shopify)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch styles/main.scss assets/main.css",
+    "build": "sass styles/main.scss assets/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiomediname/blank_theme_shopify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiomediname/blank_theme_shopify/issues"
+  },
+  "homepage": "https://github.com/sergiomediname/blank_theme_shopify#readme"
+}
