@@ -12,6 +12,12 @@
                 "label": "Background Header",
                 "default": "#000000",
                 "info": "Background color Header"
+            },
+            {
+                "type": "checkbox",
+                "id": "header_bg_transparent",
+                "label": "Header background transparent",
+                "default": true
             }
         ]
     }
