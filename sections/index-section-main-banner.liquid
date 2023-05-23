@@ -1,8 +1,12 @@
 {% assign item = section.settings %}
 <div class="main-banner">
-  <div class="content-inner">
-    <h1>{{ item.title }}</h1>
-    {{ item.image | image_url: width: 1920 | image_tag }}
+  <div class="container">
+    <div class="wrap">
+      <h1 class="main-banner__title">{{ item.title }}</h1>
+      <div class="main-banner__image">
+        {{ item.image | image_url: width: 1920 | image_tag }}
+      </div>
+    </div>
   </div>
 </div>
 
