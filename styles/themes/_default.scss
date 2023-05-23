@@ -1,3 +1,6 @@
 :root {
     --header-bg: {{ settings.header_bg }};
+    // Menu
+    --menu-bg: {{ settings.menu_bg }};
+    --menu-color: {{ settings.menu_color }};
 }

@@ -1,5 +1,7 @@
 :root {
   --header-bg: {{ settings.header_bg }};
+  --menu-bg: {{ settings.menu_bg }};
+  --menu-color: {{ settings.menu_color }};
 }
 
 /* Box sizing rules */
@@ -156,7 +158,7 @@ select {
   left: 0;
   height: 100%;
   width: 350px;
-  background-color: red;
+  background-color: var(--menu-bg);
 }
 
 .mini-cart-content {
