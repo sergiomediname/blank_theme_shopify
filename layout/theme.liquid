@@ -12,8 +12,11 @@
 		<div class="container-fluid">
 			<div class="wrap flex items-center justify-between">
 				<div class="navbar">
-					{% include 'svg-menu' %}
-					<ul class="nav flex items-center">
+					<label for="show_menu">
+						{% include 'svg-menu' %}
+					</label>
+					<input type="checkbox" id="show_menu">
+					<ul class="nav flex flex-column">
 						{% for link in linklists.main-menu.links %}
 							<li class="nav__item">
 								<a href="{{ link.url }}">{{ link.title }}</a>
