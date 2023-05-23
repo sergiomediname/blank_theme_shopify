@@ -23,9 +23,9 @@
 				</div>
 				<h1>{{ shop.name }}</h1>
 				<div class="extra-links">
-					<div class="mini-cart">
+					<div class="mini-cart relative">
 						{% include 'svg-bag' %}
-						<div class="mini-cart-content">
+						<div class="mini-cart-content absolute">
 							{% if cart.item_count == 0 %}
 								Your cart is currently empty
 							{% else %}
