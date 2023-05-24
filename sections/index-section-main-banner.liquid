@@ -7,8 +7,8 @@
         {% if item.subtitle != "" %}
           <p class="main-banner__subtitle">{{ item.subtitle }}</p>
         {% endif %}
-        {% if url != "" %}
-          {{ item.url }}
+        {% if item.url != "" and item.button_label != "" %}
+          <a class="main-banner__button" href="{{ item.url }}">{{ item.button_label }}</a>
         {% endif %}
       </div>
       <div class="main-banner__image absolute zi-10">
@@ -27,18 +27,25 @@
         "type": "text",
         "id": "title",
         "label": "Título"
-      }, {
+      },
+      {
         "type": "text",
         "id": "subtitle",
         "label": "Subtitulo"
-      }, {
+      },
+      {
         "type": "image_picker",
         "id": "image",
         "label": "Imagen"
-      }, {
+      },
+      {
         "type": "url",
         "id": "url",
         "label": "Enlace Call to action"
+      }, {
+        "type": "text",
+        "id": "button_label",
+        "label": "Texto Call to action"
       }
     ],
     "presets": [
