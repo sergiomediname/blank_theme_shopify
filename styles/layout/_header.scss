@@ -1,7 +1,7 @@
 .header {
     background-color: var(--header-bg-color, transparent);
     &:not(.header-overlap) {
-        --header-bg-color: var(--header-bg)
+        --header-bg-color: var(--header-bg);
     }
     &-overlap {
         position: absolute;
