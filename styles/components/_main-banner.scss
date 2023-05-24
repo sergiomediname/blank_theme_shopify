@@ -1,3 +1,7 @@
 .main-banner {
     min-height: 100vh;
+    &__image {
+        top: 0;
+        left: 0;
+    }
 }
