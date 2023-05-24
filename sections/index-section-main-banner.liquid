@@ -4,8 +4,8 @@
     <div class="wrap">
       <div class="relative z-20">
         <h1 class="main-banner__title relative zi-20">{{ item.title }}</h1>
-        {% if item.subtitle %}
-          <p class="main-banner__subtitle test">{{ item.subtitle }}</p>
+        {% if item.subtitle != "" %}
+          <p class="main-banner__subtitle">{{ item.subtitle }}</p>
         {% endif %}
       </div>
       <div class="main-banner__image absolute zi-10">
