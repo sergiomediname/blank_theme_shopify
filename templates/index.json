@@ -15,7 +15,9 @@
       "settings": {
         "title": "Lorem ipsum",
         "subtitle": "Subtitle Lorem ipsum dolor",
-        "image": "shopify:\/\/shop_images\/theme_cover_image.jpg"
+        "image": "shopify:\/\/shop_images\/theme_cover_image.jpg",
+        "url": "shopify:\/\/pages\/contact",
+        "button_label": "Call to action"
       }
     }
   },
