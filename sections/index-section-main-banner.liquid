@@ -11,7 +11,7 @@
           <a class="main-banner__button" href="{{ item.url }}">{{ item.button_label }}</a>
         {% endif %}
       </div>
-      <div class="main-banner__image absolute zi-10">
+      <div class="main-banner__image absolute zi-10 w-full h-full">
         {{ item.image | image_url: width: 1920 | image_tag }}
       </div>
     </div>
