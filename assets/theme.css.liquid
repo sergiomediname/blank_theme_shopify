@@ -139,8 +139,11 @@ select {
   position: absolute;
 }
 
+.header {
+  background-color: var(--header-bg-color, transparent);
+}
 .header:not(.header-overlap) {
-  background-color: var(--header-bg);
+  --header-bg-color: var(--header-bg) ;
 }
 .header-overlap {
   position: absolute;
