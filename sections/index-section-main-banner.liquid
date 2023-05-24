@@ -2,10 +2,13 @@
 <div class="main-banner relative overflow-hidden">
   <div class="container h-full flex items-center justify-center">
     <div class="wrap">
-      <div class="relative z-20">
-        <h1 class="main-banner__title relative zi-20">{{ item.title }}</h1>
+      <div class="relative zi-20">
+        <h1 class="main-banner__title">{{ item.title }}</h1>
         {% if item.subtitle != "" %}
           <p class="main-banner__subtitle">{{ item.subtitle }}</p>
+        {% endif %}
+        {% if url != "" %}
+          {{ item.url }}
         {% endif %}
       </div>
       <div class="main-banner__image absolute zi-10">
@@ -32,6 +35,10 @@
         "type": "image_picker",
         "id": "image",
         "label": "Imagen"
+      }, {
+        "type": "url",
+        "id": "url",
+        "label": "Enlace Call to action"
       }
     ],
     "presets": [
