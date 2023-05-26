@@ -19,10 +19,14 @@
         "url": "shopify:\/\/pages\/contact",
         "button_label": "Call to action"
       }
+    },
+    "products-grid": {
+      "type": "index-section-products-grid"
     }
   },
   "order": [
     "main",
-    "section-main-banner"
+    "section-main-banner",
+    "products-grid"
   ]
 }
