@@ -1,6 +1,10 @@
 :root {
     // Base
     --font-family: {{ settings.font_family }};
+    --font-f: {{ header_font.family }}, {{ header_font.fallback_families }};
+    --font-w: {{ header_font.weight }};
+    --font-s: {{ header_font.style }};
+
     --header-bg: {{ settings.header_bg }};
     // Menu
     --menu-bg: {{ settings.menu_bg }};
