@@ -1,4 +1,6 @@
 :root {
+    // Base
+    --font-family: {{ settings.font_family }};
     --header-bg: {{ settings.header_bg }};
     // Menu
     --menu-bg: {{ settings.menu_bg }};
