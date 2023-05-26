@@ -1,20 +1,18 @@
 <div>
   <h2>test</h2>
-  {% paginate collection.products by 12 %}
-    {% if collection.products.size == 0 %}
-      <p>No hay productos</p>
-    {% else %}
-      {% for product in collection.products %}
-        {{ product.title | truncate: 30 }}
-      {% endfor %}
+  {% if collection.products.size == 0 %}
+    <p>No hay productos</p>
+  {% else %}
+    {% for product in collection.products %}
+      {{ product.title | truncate: 30 }}
+    {% endfor %}
 
-      {% if paginate.pages > 1 %}
-        <div id="paginate">
-          {{ paginate | default_pagination }}
-        </div>
-      {% endif %}
+    {% if paginate.pages > 1 %}
+      <div id="paginate">
+        {{ paginate | default_pagination }}
+      </div>
     {% endif %}
-  {% endpaginate %}
+  {% endif %}
 </div>
 
 {% schema %}
