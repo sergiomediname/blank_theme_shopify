@@ -14,9 +14,7 @@
     <p>No hay productos</p>
   {% else %}
     {% for product in collection.products %}
-      {{ product.images }}
-      {{ product.images.first | product_img_url: "small" | image_tag }}
-      {{ product.images | product_img_url: "small" | image_tag }}
+      {{ product.images.first | product_img_url: 'small' }}
 
       <h1>{{ product.title }}</h1>
     {% endfor %}
