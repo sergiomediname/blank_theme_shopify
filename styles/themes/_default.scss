@@ -1,9 +1,7 @@
 :root {
     // Base
-    --font-family: {{ settings.font_family }};
-    --font-f: {{ header_font.family }}, {{ header_font.fallback_families }};
-    --font-w: {{ header_font.weight }};
-    --font-s: {{ header_font.style }};
+    --font-family: {{ settings.font_family.family }}, {{ settings.font_family.fallback_families }};
+    --font-weight: {{ settings.font_family.weight }};
 
     --header-bg: {{ settings.header_bg }};
     // Menu
