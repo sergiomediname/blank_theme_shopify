@@ -36,6 +36,7 @@
                 <h1 class="card__title">
                   <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
                 </h1>
+                <div class="card__price">{{ product.price | money }}</div>
               </div>
             </div>
           </div>
