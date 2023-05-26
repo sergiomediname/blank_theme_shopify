@@ -13,8 +13,9 @@
     &-control {
         display: block;
         &:checked {
-            + nav {
+            + .nav {
                 --test: 0;
+                background-color: red;
             }
         }
     }
