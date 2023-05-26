@@ -3,7 +3,7 @@
   {% if collection.products.size == 0 %}
     <p>No hay productos</p>
   {% else %}
-    {% for product in collection['{{ settings.feature_collection }}'].products %}
+    {% for product in collection[{{ settings.feature_collection }}].products %}
       <h1>{{ product.title }}</h1>
     {% endfor %}
   {% endif %}
