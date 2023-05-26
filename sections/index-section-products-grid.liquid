@@ -23,7 +23,6 @@
                 loading="lazy"
                 alt="{{ product.title }}"
                 title="{{ product.title }}" />
-              <p>{{ product.images[1] }}</p>
               {% if product.images[1] %}
                 <img
                   src="{{ product.images[1] | image_url: width: 520 }}"
