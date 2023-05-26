@@ -10,6 +10,8 @@
         width: 250px;
         background-color: var(--menu-bg);
         z-index: 20;
+        transform: translateX(var(--nav-position), -100%);
+        transition: transform .5s cubic-bezier(0.54,0,0.1,1);
         &__link {
             display: block;
             padding: 0.75rem 1.5rem;
