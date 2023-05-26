@@ -23,12 +23,13 @@
                 loading="lazy"
                 alt="{{ product.title }}"
                 title="{{ product.title }}" />
-              <img
-                src="{{ product.images[1] | image_url: width: 520 }}"
-                loading="lazy"
-                alt="{{ product.title }}"
-                title="{{ product.title }}" />
-
+              {% if product.images[1] %}
+                <img
+                  src="{{ product.images[1] | image_url: width: 520 }}"
+                  loading="lazy"
+                  alt="{{ product.title }}"
+                  title="{{ product.title }}" />
+              {% endif %}
             </div>
             <div class="card__content">
               <div class="card-wrap">
