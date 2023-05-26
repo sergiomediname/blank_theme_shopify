@@ -8,12 +8,13 @@
 {% assign collection = collections[name_collection] %}
 
 
-<div>
+<div class="products-section">
   <h2>test</h2>
   {% if collection.products.size == 0 %}
     <p>No hay productos</p>
   {% else %}
     {% for product in collection.products %}
+      {{ product.images }}
       <h1>{{ product.title }}</h1>
     {% endfor %}
   {% endif %}
