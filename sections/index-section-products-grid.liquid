@@ -14,8 +14,11 @@
     <p>No hay productos</p>
   {% else %}
     {% for product in collection.products %}
-      {{ product.images.first | product_img_url: 'small' }}
-
+      <img
+        src="{{ product.images.first | product_img_url: 'small' }}"
+        loading="lazy"
+        alt="{{ product.title }}"
+        title="{{ product.title }}">
       <h1>{{ product.title }}</h1>
     {% endfor %}
   {% endif %}
