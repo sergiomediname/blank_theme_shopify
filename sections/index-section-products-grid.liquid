@@ -1,12 +1,8 @@
 <div>
-  {% paginate collection.products by 20 %}
-    {% for product in collection.products %}
-      <!-- product info -->
-      {{ product.title | truncate: 30 }}
-    {% endfor %}
-
-    {{ paginate | default_pagination }}
-  {% endpaginate %}
+  {% for product in collection.products %}
+    <!-- product info -->
+    {{ product.title | truncate: 30 }}
+  {% endfor %}
 </div>
 
 {% schema %}
