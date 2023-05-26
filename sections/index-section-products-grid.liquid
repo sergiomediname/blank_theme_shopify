@@ -17,8 +17,6 @@
       <div class="grid cols-2">
         {% for product in collection.products %}
           <div class="card">
-            {{ product.url | within: collection }}
-            {{ product.url }}
             <div class="card__thumb">
               <img
                 src="{{ product.images.first | image_url: width: 520 }}"
@@ -35,7 +33,9 @@
             </div>
             <div class="card__content">
               <div class="card-wrap">
-                <h1 class="card__title">{{ product.title }}</h1>
+                <h1 class="card__title">
+                  <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+                </h1>
               </div>
             </div>
           </div>
