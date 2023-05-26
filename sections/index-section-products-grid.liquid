@@ -3,7 +3,7 @@
   {% if collection.products.size == 0 %}
     <p>No hay productos</p>
   {% else %}
-    {% for product in collection.products %}
+    {% for product in collection['{{ settings.feature_collection }}'].products %}
       <h1>{{ product.title }}</h1>
     {% endfor %}
   {% endif %}
@@ -13,6 +13,12 @@
   {
     "name": "Listado de productos",
     "class": "index-section",
-    "settings": []
+    "settings": [
+      {
+        "type": "collection",
+        "id": "feature_collection",
+        "label": "Feature collection"
+      }
+    ]
   }
 {% endschema %}
