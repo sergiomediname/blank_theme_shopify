@@ -21,7 +21,7 @@
               <p>featured</p>
               {{ product.featured_image }}
               <p>0</p>
-              {{ product.images[1] }}
+              {{ product.images[0] }}
               <img
                 src="{{ product.images.first | image_url: width: 520 }}"
                 loading="lazy"
