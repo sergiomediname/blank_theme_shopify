@@ -1,9 +1,19 @@
+{% assign item = section.settings %}
+{% assign name_collection = item.feature_collection %}
+
+{% if name_collection == blank %}
+  {% assign name_collection = "all" %}
+{% endif %}
+
+{% assign collection = collections[name_collection] %}
+
+
 <div>
   <h2>test</h2>
   {% if collection.products.size == 0 %}
     <p>No hay productos</p>
   {% else %}
-    {% for product in collection[{{ settings.feature_collection }}].products %}
+    {% for product in collection.products %}
       <h1>{{ product.title }}</h1>
     {% endfor %}
   {% endif %}
