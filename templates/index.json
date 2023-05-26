@@ -21,7 +21,10 @@
       }
     },
     "products-grid": {
-      "type": "index-section-products-grid"
+      "type": "index-section-products-grid",
+      "settings": {
+        "feature_collection": "automated-collection"
+      }
     }
   },
   "order": [
