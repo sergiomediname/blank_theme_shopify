@@ -3,7 +3,7 @@
     "name": "Setting",
     "settings": [
       {
-        "type": "fontfont_picker",
+        "type": "font_picker",
         "id": "font_family",
         "label": "Tipografía"
       },
