@@ -22,7 +22,7 @@
         <div class="container-fluid">
           <div class="wrap flex items-center justify-between">
             <div class="navbar">
-              <label for="show_menu">{% include 'svg-menu' %}</label>
+              <label class="offcanvas-switch" for="show_menu">{% include 'svg-menu' %}</label>
               <input type="checkbox" id="show_menu">
               <ul class="nav flex flex-column">
                 {% for link in linklists.main-menu.links %}

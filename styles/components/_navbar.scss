@@ -9,11 +9,13 @@
         height: 100%;
         width: 250px;
         background-color: var(--menu-bg);
+        z-index: 20;
         &__link {
             display: block;
             padding: 0.75rem 1.5rem;
             text-decoration: none;
             color: var(--menu-color);
+            font-weight: 700;
         } 
     }
 }
