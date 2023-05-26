@@ -18,17 +18,17 @@
         {% for product in collection.products %}
           <div class="card">
             <div class="card__thumb">
-              <p>featured img</p>
-              {{ product.featured_image }}
-              <p>2</p>
-              {{ product.images[2] }}
-              <p>1 img</p>
-              {{ product.images[1] }}
               <img
                 src="{{ product.images.first | image_url: width: 520 }}"
                 loading="lazy"
                 alt="{{ product.title }}"
                 title="{{ product.title }}" />
+              <img
+                src="{{ product.images[1] | image_url: width: 520 }}"
+                loading="lazy"
+                alt="{{ product.title }}"
+                title="{{ product.title }}" />
+
             </div>
             <div class="card__content">
               <div class="card-wrap">
