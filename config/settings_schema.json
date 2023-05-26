@@ -3,6 +3,11 @@
     "name": "Setting",
     "settings": [
       {
+        "type": "fontfont_picker",
+        "id": "font_family",
+        "label": "Tipografía"
+      },
+      {
         "type": "header",
         "content": "Header"
       },
