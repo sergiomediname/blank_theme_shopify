@@ -8,6 +8,7 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.253);
+            opacity: var(--switch-bars, 0);
         }
     }
     &-control {
@@ -15,7 +16,7 @@
         &:checked {
             + .nav {
                 --nav-position: 0;
-                background-color: red;
+                --switch-bars: 1;
             }
         }
     }
