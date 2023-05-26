@@ -17,6 +17,8 @@
       <div class="grid cols-2">
         {% for product in collection.products %}
           <div class="card">
+            {{ product.url | within: collection }}
+            {{ product.url }}
             <div class="card__thumb">
               <img
                 src="{{ product.images.first | image_url: width: 520 }}"
