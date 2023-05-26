@@ -5,7 +5,8 @@
       {
         "type": "font_picker",
         "id": "font_family",
-        "label": "Tipografía"
+        "label": "Tipografía",
+        "default": "futura_n4"
       },
       {
         "type": "header",
