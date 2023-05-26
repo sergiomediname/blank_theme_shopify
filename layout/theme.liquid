@@ -11,7 +11,7 @@
       {{ base_font | font_face: font_display: 'swap' }}
 
       {%- assign base_font_bold = base_font | font_modify: 'weight', 'bold' -%}
-      {{ base_font_bold | font_face }}
+      {{ base_font_bold | font_face: font_display: 'swap' }}
     </style>
     {{ 'theme.css' | asset_url | stylesheet_tag }}
   </head>
