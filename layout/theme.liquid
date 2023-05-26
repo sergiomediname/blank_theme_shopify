@@ -17,13 +17,13 @@
   </head>
 
   <body class="body">
+    <input class="offcanvas-control" type="checkbox" id="show_menu">
     <div class="layout">
       <header class="header {% if settings.header_bg_transparent %}header-overlap{% endif %}">
         <div class="container-fluid">
           <div class="wrap flex items-center justify-between">
             <div class="navbar">
               <label class="offcanvas-switch" for="show_menu">{% include 'svg-menu' %}</label>
-              <input class="offcanvas-control" type="checkbox" id="show_menu">
               <ul class="nav flex flex-column">
                 {% for link in linklists.main-menu.links %}
                   <li class="nav__item">

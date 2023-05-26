@@ -15,7 +15,7 @@
     &-control {
         display: block;
         &:checked {
-            + .nav {
+            + .layout {
                 --nav-position: 0;
                 --switch-bars: 1;
             }
