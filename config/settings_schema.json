@@ -3,6 +3,10 @@
     "name": "Setting",
     "settings": [
       {
+        "type": "header",
+        "content": "Tipografía"
+      },
+      {
         "type": "font_picker",
         "id": "font_family",
         "label": "Tipografía",
@@ -39,16 +43,6 @@
         "id": "menu_color",
         "label": "Color Menu",
         "default": "#000000"
-      }
-    ]
-  },
-  {
-    "name": "Tipografía",
-    "settings": [
-      {
-        "type": "text",
-        "id": "test",
-        "label": "Tipografía"
       }
     ]
   }
