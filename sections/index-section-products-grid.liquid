@@ -13,22 +13,24 @@
   {% if collection.products.size == 0 %}
     <p>No hay productos</p>
   {% else %}
-    {% for product in collection.products %}
-      <div class="card">
-        <div class="card__thumb">
-          <img
-            src="{{ product.images.first | image_url: width: 280 }}"
-            loading="lazy"
-            alt="{{ product.title }}"
-            title="{{ product.title }}" />
+    <div class="grid">
+      {% for product in collection.products %}
+        <div class="card">
+          <div class="card__thumb">
+            <img
+              src="{{ product.images.first | image_url: width: 280 }}"
+              loading="lazy"
+              alt="{{ product.title }}"
+              title="{{ product.title }}" />
+          </div>
+          <div class="card__content">
+            <div class="card-wrap">
+              <h1 class="card__title">{{ product.title }}</h1>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card__content">
-        <div class="card-wrap">
-          <h1 class="card__title">{{ product.title }}</h1>
-        </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   {% endif %}
 </div>
 
