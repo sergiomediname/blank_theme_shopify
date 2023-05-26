@@ -18,6 +18,8 @@
         {% for product in collection.products %}
           <div class="card">
             <div class="card__thumb">
+              {{ product.images[0] }}
+              {{ product.images[1] }}
               <img
                 src="{{ product.images.first | image_url: width: 520 }}"
                 loading="lazy"
