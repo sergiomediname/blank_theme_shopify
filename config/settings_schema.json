@@ -41,5 +41,15 @@
         "default": "#000000"
       }
     ]
+  },
+  {
+    "name": "Tipografía",
+    "settings": [
+      {
+        "type": "text",
+        "id": "test",
+        "label": "Tipografía"
+      }
+    ]
   }
 ]
