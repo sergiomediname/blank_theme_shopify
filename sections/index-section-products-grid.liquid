@@ -4,14 +4,8 @@
     <p>No hay productos</p>
   {% else %}
     {% for product in collection.products %}
-      {{ product.title | truncate: 30 }}
+      {{ product.title }}
     {% endfor %}
-
-    {% if paginate.pages > 1 %}
-      <div id="paginate">
-        {{ paginate | default_pagination }}
-      </div>
-    {% endif %}
   {% endif %}
 </div>
 
