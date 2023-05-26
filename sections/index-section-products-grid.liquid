@@ -15,7 +15,7 @@
   {% else %}
     {% for product in collection.products %}
       <img
-        src="{{ product.images.first | product_img_url: 'small' }}"
+        src="{{ product.images.first | image_url: width: 280 }}"
         loading="lazy"
         alt="{{ product.title }}"
         title="{{ product.title }}" />
