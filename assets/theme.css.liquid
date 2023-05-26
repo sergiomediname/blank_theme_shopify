@@ -264,12 +264,14 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.253);
+  transform: translateX(var(--nav-position), -100%);
+  transition: transform 0.5s cubic-bezier(0.54, 0, 0.1, 1);
 }
 .offcanvas-control {
   display: block;
 }
 .offcanvas-control:checked + .nav {
-  --test: 0;
+  --nav-position: 0;
   background-color: red;
 }
 
