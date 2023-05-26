@@ -268,9 +268,10 @@ body {
   background-color: rgba(0, 0, 0, 0.253);
   pointer-events: var(--switch-bars, none);
   opacity: var(--switch-bars, 0);
+  transition: opacity ease 0.5s;
 }
 .offcanvas-control {
-  display: block;
+  display: none;
 }
 .offcanvas-control:checked + .layout {
   --nav-position: 0;

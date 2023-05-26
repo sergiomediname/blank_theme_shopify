@@ -10,10 +10,11 @@
             background-color: rgba(0, 0, 0, 0.253);
             pointer-events: var(--switch-bars,none);
             opacity: var(--switch-bars, 0);
+            transition: opacity ease .5s;
         }
     }
     &-control {
-        display: block;
+        display: none;
         &:checked {
             + .layout {
                 --nav-position: 0;
