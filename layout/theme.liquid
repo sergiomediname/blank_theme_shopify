@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>untitled</title>
     <style>
-      {% assign header_font = settings.font_family %}
-      
-      {{ header_font | font_face }}
+      {{ settings.font_family }}
+
+      {{ settings.font_family | font_face: font_display: 'swap' }}
       
     </style>
     {{ 'theme.css' | asset_url | stylesheet_tag }}
