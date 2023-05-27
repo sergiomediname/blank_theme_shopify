@@ -18,7 +18,7 @@
     {% endif %}
   </div>
   {{ item.full_width }}
-  <div class="container {{ item.full_width }}">
+  <div class="container{% if item.full_width %}-fluid{% endif %}">
 
     {% if collection.products.size == 0 %}
       <p>No hay productos</p>
