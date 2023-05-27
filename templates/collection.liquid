@@ -25,11 +25,21 @@
           <!-- Create a <div> for every product and a <tr> for after every third one-->
           {% for product in collection.products %}
             <div class="product card">
-              <div class="image">
-                <a href="{{ product.url | within: collection }}"title="{{ product.title }}">
-                  <img src="{{ product.images.first | product_img_url: 'small' }}"alt="{{ product.title }}" /></a>
+              <div class="card__thumb">
+                <img
+                  src="{{ product.images.first | image_url: width: 520 }}"
+                  loading="lazy"
+                  alt="{{ product.title }}"
+                  title="{{ product.title }}" />
+                {% if product.images[1] %}
+                  <img
+                    src="{{ product.images[1] | image_url: width: 520 }}"
+                    loading="lazy"
+                    alt="{{ product.title }}"
+                    title="{{ product.title }}" />
+                {% endif %}
               </div>
-              <div class="details">
+              <div class="card__content">
                 <a href="{{ product.url | within: collection }}">
                   {{ product.title | truncate: 30 }}</a><br/>
                 <small>{{ product.price | money }}</small>
