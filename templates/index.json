@@ -25,7 +25,8 @@
       "settings": {
         "title": "Titulo",
         "description": "Descripción",
-        "feature_collection": "automated-collection"
+        "feature_collection": "automated-collection",
+        "full_width": true
       }
     }
   },
