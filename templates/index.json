@@ -29,11 +29,15 @@
         "feature_collection": "automated-collection",
         "columns": 6
       }
+    },
+    "banner": {
+      "type": "index-section-banner"
     }
   },
   "order": [
     "main",
     "section-main-banner",
-    "products-grid"
+    "products-grid",
+    "banner"
   ]
 }
