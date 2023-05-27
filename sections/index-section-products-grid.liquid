@@ -1,5 +1,6 @@
 {% assign item = section.settings %}
 {% assign name_collection = item.feature_collection %}
+{% assign length = item.limit | plus: 0 %}
 
 {% if name_collection == blank %}
   {% assign name_collection = "all" %}
@@ -23,7 +24,7 @@
       <p>No hay productos</p>
     {% else %}
       <div class="grid b:skin-cols" style="--skin-cols: {{ item.columns }}">
-        {% for product in collection.products %}
+        {% for product in collection.products limit: length %}
           <div class="card">
             <div class="card__thumb">
               <img
@@ -79,11 +80,16 @@
         "id": "feature_collection",
         "label": "Colección"
       }, {
+        "type": "number",
+        "id": "limit",
+        "label": "Número de productos a mostrar",
+        "default": "6"
+      }, {
         "type": "range",
         "id": "columns",
         "min": 4,
         "max": 8,
-        "label": "Número de productos a mostrar",
+        "label": "Productos por fila",
         "default": 4,
         "step": 1
       }
