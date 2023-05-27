@@ -16,6 +16,9 @@
     {% if item.description != "" %}
       <p>{{ item.description }}</p>
     {% endif %}
+  </div>
+  {{ item.full_width }}
+  <div class="container {{ item.full_width }}">
 
     {% if collection.products.size == 0 %}
       <p>No hay productos</p>
@@ -69,6 +72,10 @@
         "type": "collection",
         "id": "feature_collection",
         "label": "Feature collection"
+      }, {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Sección de ancho completo"
       }
     ]
   }
