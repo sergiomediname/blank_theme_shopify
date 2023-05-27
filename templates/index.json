@@ -23,6 +23,8 @@
     "products-grid": {
       "type": "index-section-products-grid",
       "settings": {
+        "title": "Titulo",
+        "description": "Descripción",
         "feature_collection": "automated-collection"
       }
     }
