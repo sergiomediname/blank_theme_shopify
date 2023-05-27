@@ -23,10 +23,11 @@
     "products-grid": {
       "type": "index-section-products-grid",
       "settings": {
+        "full_width": false,
         "title": "Titulo",
         "description": "Descripción",
         "feature_collection": "automated-collection",
-        "full_width": true
+        "columns": 6
       }
     }
   },
