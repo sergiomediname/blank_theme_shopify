@@ -22,7 +22,7 @@
     {% if collection.products.size == 0 %}
       <p>No hay productos</p>
     {% else %}
-      <div class="grid cols-2">
+      <div class="grid b:skin-cols" style="--skin-cols: {{ item.columns }}">
         {% for product in collection.products %}
           <div class="card">
             <div class="card__thumb">

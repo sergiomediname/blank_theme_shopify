@@ -15,3 +15,9 @@
 .cols-2 {
     grid-template-columns: repeat(8,minmax(0,1fr));
 }
+
+.b\:skin {
+    &-cols {
+        grid-template-columns: repeat(var(--skin-cols, 4), minmax(0, 1fr));
+    }
+}
