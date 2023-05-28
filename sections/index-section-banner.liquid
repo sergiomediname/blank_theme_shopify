@@ -1,5 +1,16 @@
-<div>
-  banner
+{% assign item = section.settings %}
+
+<div class="banners">
+  {% for block in section.blocks %}
+    {% assign banner = block.settings %}
+    <div class="banner">
+      <div class="banner__image">{{ banner.image | image_url: width: 700 | image_tag }}</div>
+      <div class="banner__content">
+        <div class="banner__title">{{ banner.title }}</div>
+      </div>
+    </div>
+
+  {% endfor %}
 </div>
 
 {% schema %}
