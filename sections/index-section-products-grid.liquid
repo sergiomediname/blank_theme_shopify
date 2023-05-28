@@ -23,7 +23,7 @@
     {% if collection.products.size == 0 %}
       <p>No hay productos</p>
     {% else %}
-      <div class="grid b:skin-cols" style="--skin-cols: {{ item.columns }}; --title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
+      <div class="grid gap-2 b:skin-cols" style="--skin-cols: {{ item.columns }}; --title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
         {% for product in collection.products limit: length %}
           <div class="card">
             <div class="card__thumb">
@@ -40,7 +40,7 @@
                   title="{{ product.title }}" />
               {% endif %}
             </div>
-            <div class="card__content">
+            <div class="card__content text-center">
               <div class="card-wrap">
                 <h1 class="card__title base">
                   <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
