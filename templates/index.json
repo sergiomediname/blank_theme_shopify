@@ -27,11 +27,31 @@
         "title": "Titulo",
         "description": "Descripción",
         "feature_collection": "automated-collection",
-        "columns": 6
+        "limit": "6",
+        "columns": 6,
+        "title_color": "#000000",
+        "price_color": "#000000"
       }
     },
     "banner": {
-      "type": "index-section-banner"
+      "type": "index-section-banner",
+      "blocks": {
+        "d295cb74-cade-42ff-8b74-861e510d9241": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-brady-knoll-5187484.jpg",
+            "title": "Titulo",
+            "subtitle": "Subtitulo",
+            "url": "shopify:\/\/products\/the-multi-location-snowboard",
+            "label": "Boton"
+          }
+        }
+      },
+      "block_order": [
+        "d295cb74-cade-42ff-8b74-861e510d9241"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
