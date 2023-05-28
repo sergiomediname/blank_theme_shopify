@@ -12,6 +12,12 @@
             object-fit: cover;
         }
     }
+    &__title {
+        color: var(--title-color, #000000);
+    }
+    &__price {
+        color: var(--price-color, #000000);
+    }
 }
 
 
