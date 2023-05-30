@@ -3,11 +3,11 @@
   <div class="banners">
     {% for block in section.blocks %}
       {% assign banner = block.settings %}
-      <div class="banner">
+      <div class="banner relative">
         {% if banner.image %}
-          <div class="banner__image overflow-hidden ratio ratio-{{ banner.ratio }}">{{ banner.image | image_url: width: 700 | image_tag: preload: true, class: "fit-image" }}</div>
+          <div class="banner__image overflow-hidden ratio ratio-{{ banner.ratio }} z-10">{{ banner.image | image_url: width: 700 | image_tag: preload: true, class: "fit-image" }}</div>
         {% endif %}
-        <div class="banner__content">
+        <div class="banner__content absolute zi-20">
           {% if banner.title %}
             <div class="banner__title">{{ banner.title }}</div>
           {% endif %}
