@@ -8,15 +8,17 @@
           <div class="banner__image overflow-hidden ratio ratio-{{ item.ratio }} z-10">{{ banner.image | image_url: width: 700 | image_tag: preload: true, class: "fit-image" }}</div>
         {% endif %}
         <div class="banner__content absolute zi-20">
-          {% if banner.title %}
-            <div class="banner__title">{{ banner.title }}</div>
-          {% endif %}
-          {% if banner.subtitle %}
-            <div class="banner__subtitle">{{ banner.subtitle }}</div>
-          {% endif %}
-          {% if banner.url %}
-            <a class="banner__button" href="{{ banner.url }}">{{ banner.label }}</a>
-          {% endif %}
+          <div class="wrap">
+            {% if banner.title %}
+              <div class="banner__title">{{ banner.title }}</div>
+            {% endif %}
+            {% if banner.subtitle %}
+              <div class="banner__subtitle">{{ banner.subtitle }}</div>
+            {% endif %}
+            {% if banner.url %}
+              <a class="banner__button" href="{{ banner.url }}">{{ banner.label }}</a>
+            {% endif %}
+          </div>
         </div>
       </div>
     {% endfor %}
