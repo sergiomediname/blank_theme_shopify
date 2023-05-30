@@ -7,7 +7,7 @@
         {% if banner.image %}
           <div class="banner__image overflow-hidden ratio ratio-{{ item.ratio }} z-10">{{ banner.image | image_url: width: 700 | image_tag: preload: true, class: "fit-image" }}</div>
         {% endif %}
-        <div class="banner__content absolute zi-20">
+        <div class="banner__content absolute zi-20 flex items-center justify-center">
           <div class="wrap">
             {% if banner.title %}
               <div class="banner__title">{{ banner.title }}</div>
