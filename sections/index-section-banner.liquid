@@ -1,6 +1,6 @@
 {% assign item = section.settings %}
 <div class="container">
-  <div class="banners">
+  <div class="banners grid grid b:skin-cols" style="--skin-cols: {{ item.columns }}">
     {% for block in section.blocks %}
       {% assign banner = block.settings %}
       <div class="banner relative">
@@ -29,6 +29,14 @@
     "class": "index-section",
     "settings": [
       {
+        "type": "range",
+        "id": "columns",
+        "min": 1,
+        "max": 6,
+        "label": "Banners por fila",
+        "default": 2,
+        "step": 1
+      }, {
         "type": "select",
         "id": "ratio",
         "label": "Tamaño de imágenes",
