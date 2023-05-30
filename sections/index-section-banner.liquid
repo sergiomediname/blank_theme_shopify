@@ -5,7 +5,7 @@
       {% assign banner = block.settings %}
       <div class="banner relative">
         {% if banner.image %}
-          <div class="banner__image overflow-hidden ratio ratio-{{ banner.ratio }} z-10">{{ banner.image | image_url: width: 700 | image_tag: preload: true, class: "fit-image" }}</div>
+          <div class="banner__image overflow-hidden ratio ratio-{{ item.ratio }} z-10">{{ banner.image | image_url: width: 700 | image_tag: preload: true, class: "fit-image" }}</div>
         {% endif %}
         <div class="banner__content absolute zi-20">
           {% if banner.title %}
@@ -27,7 +27,44 @@
   {
     "name": "Banner",
     "class": "index-section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "select",
+        "id": "ratio",
+        "label": "Tamaño de imágenes",
+        "options": [
+          {
+            "value": "21/9",
+            "label": "21/9"
+          },
+          {
+            "value": "16/9",
+            "label": "16/9"
+          },
+          {
+            "value": "4/3",
+            "label": "4/3"
+          },
+          {
+            "value": "3/4",
+            "label": "3/4"
+          }, {
+            "value": "1/1",
+            "label": "1/1"
+          }, {
+            "value": "1/2",
+            "label": "1/2"
+          }, {
+            "value": "2/3",
+            "label": "2/3"
+          }, {
+            "value": "5/7",
+            "label": "5/7"
+          }
+        ],
+        "default": "3/4"
+      }
+    ],
     "blocks": [
       {
         "type": "item",
@@ -39,21 +76,6 @@
             "label": "Imagen"
           },
           {
-            "type": "select",
-            "id": "ratio",
-            "label": "Tamaño imagen",
-            "options": [
-              {
-                "value": "3/4",
-                "label": "3/4"
-              }, {
-                "value": "16/9",
-                "label": "16/9"
-              }
-            ],
-            "default": "3/4"
-          },
-          {
             "type": "text",
             "id": "title",
             "label": "Título"
@@ -62,7 +84,8 @@
             "type": "text",
             "id": "subtitle",
             "label": "Subtítulo"
-          }, {
+          },
+          {
             "type": "header",
             "content": "Botón"
           }, {
