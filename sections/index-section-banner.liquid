@@ -1,6 +1,6 @@
 {% assign item = section.settings %}
 <div class="container">
-  <div class="banners grid grid b:skin-cols" style="--skin-cols: {{ item.columns }}">
+  <div class="banners grid grid b:skin-cols gap-2" style="--skin-cols: {{ item.columns }}">
     {% for block in section.blocks %}
       {% assign banner = block.settings %}
       <div class="banner relative">
