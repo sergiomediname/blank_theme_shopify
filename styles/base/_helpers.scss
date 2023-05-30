@@ -21,3 +21,13 @@
         grid-template-columns: repeat(var(--skin-cols, 4), minmax(0, 1fr));
     }
 }
+
+.fit-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    min-height: 100%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
+}

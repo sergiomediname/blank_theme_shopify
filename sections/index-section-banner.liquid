@@ -5,7 +5,7 @@
       {% assign banner = block.settings %}
       <div class="banner">
         {% if banner.image %}
-          <div class="banner__image ratio-{{ banner.ratio }}">{{ banner.image | image_url: width: 700 | image_tag }}</div>
+          <div class="banner__image ratio ratio-{{ banner.ratio }}">{{ banner.image | image_url: width: 700 | image_tag: preload: true, class: "fit-image" }}</div>
         {% endif %}
         <div class="banner__content">
           {% if banner.title %}
