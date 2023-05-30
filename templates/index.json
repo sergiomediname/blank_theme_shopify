@@ -45,12 +45,25 @@
             "url": "shopify:\/\/products\/the-multi-location-snowboard",
             "label": "Boton"
           }
+        },
+        "617a0c06-1444-4ab7-8603-782ec050e98e": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kuf6dutpsT0vSVehic3EZIqkOBt.jpg",
+            "title": "",
+            "subtitle": "",
+            "url": "",
+            "label": ""
+          }
         }
       },
       "block_order": [
-        "d295cb74-cade-42ff-8b74-861e510d9241"
+        "d295cb74-cade-42ff-8b74-861e510d9241",
+        "617a0c06-1444-4ab7-8603-782ec050e98e"
       ],
       "settings": {
+        "columns": 2,
+        "ratio": "16\/9"
       }
     }
   },
