@@ -17,7 +17,10 @@
   </head>
 
   <body class="body">
-    <input class="offcanvas-control" type="checkbox" id="show_menu">
+    <input
+      class="offcanvas-control"
+      type="checkbox"
+      id="show_menu" />
     <div class="layout">
       <header class="header {% if settings.header_bg_transparent %}header-overlap{% endif %}">
         <div class="container-fluid">
@@ -56,6 +59,13 @@
       <main class="main">
         {{ content_for_layout }}
       </main>
+
+      <footer>
+        <div class="container">
+          © {{ "now" | date: '%Y' }} {{ shop.name }} | Developed by sergiomedina.me
+        </div>
+      </footer>
+
     </div>
 
   </body>
