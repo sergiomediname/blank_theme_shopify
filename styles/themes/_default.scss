@@ -20,4 +20,5 @@
     // Espaciados
     --primary-spacing: {{ settings.primary_spacing | divided_by: 16.0 }}rem;
     --secondary-spacing: {{ settings.secondary_spacing | divided_by: 16.0 }}rem;
+    --section-spacing: {{ settings.section_spacing | divided_by: 16.0 }}rem;
 }
