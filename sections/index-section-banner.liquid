@@ -1,5 +1,5 @@
 {% assign item = section.settings %}
-<div class="{% if item.full_width %}container-fluid{% else %}container{% endif %}">
+<div class="{% if item.full_width %}container-fluid{% else %}container{% endif %} b:skin-section-sy">
   <div class="banners grid grid b:skin-cols gap-2" style="--skin-cols: {{ item.columns }}">
     {% for block in section.blocks %}
       {% assign banner = block.settings %}
