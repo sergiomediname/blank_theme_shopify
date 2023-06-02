@@ -4,6 +4,28 @@
     "settings": [
       {
         "type": "header",
+        "content": "General"
+      },
+      {
+        "type": "color",
+        "id": "body_bg",
+        "label": "Color de fondo global",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Color de texto",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "link_color",
+        "label": "Color de enlace",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
         "content": "Tipografía"
       },
       {

@@ -1,4 +1,7 @@
 :root {
+  --body-bg: {{ settings.body_bg }};
+  --text-color: {{ settings.text_color }};
+  --link-color: {{ settings.link_color }};
   --font-family: {{ settings.font_family.family }}, {{ settings.font_family.fallback_families }};
   --font-weight: {{ settings.font_family.weight }};
   --header-bg: {{ settings.header_bg }};
@@ -276,6 +279,12 @@ html {
 body {
   font-family: var(--font-family);
   font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--body-bg);
+}
+
+a {
+  color: var(--link-color);
 }
 
 .base {

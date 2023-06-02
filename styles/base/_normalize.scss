@@ -4,6 +4,11 @@ html {
 body {
     font-family: var(--font-family);
     font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--body-bg);
+}
+a {
+    color: var(--link-color);
 }
 .base {
     font-size: 1rem;
