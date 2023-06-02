@@ -103,3 +103,11 @@ cols {
     transform: translate(-50%,-50%);
     object-fit: cover;
 }
+
+.sy {
+    &-1 {
+        > * + * {
+            margin-top: 1rem;
+        }
+    }
+}
