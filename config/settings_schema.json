@@ -81,6 +81,12 @@
         "id": "button_color",
         "label": "Color de texto",
         "default": "#FFFFFF"
+      },
+      {
+        "type": "html",
+        "id": "button_custom",
+        "label": "Estilos personalizados",
+        "info": "Agregar estilos CSS para personalizar los botones"
       }
     ]
   }

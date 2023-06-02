@@ -14,6 +14,9 @@
       {{ base_font_bold | font_face: font_display: 'swap' }}
     </style>
     {{ 'theme.css' | asset_url | stylesheet_tag }}
+    <style>
+      {{ settings.button_custom }}
+    </style>
   </head>
 
   <body class="body">
