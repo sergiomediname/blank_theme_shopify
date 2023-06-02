@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "sass --watch styles/main.scss assets/theme.css.liquid",
-    "build": "sass styles/main.scss assets/theme.css.liquid"
+    "build": "sass --no-source-map styles/main.scss assets/theme.css.liquid --style compressed"
   },
   "repository": {
     "type": "git",
