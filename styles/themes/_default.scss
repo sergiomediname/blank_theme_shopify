@@ -12,4 +12,8 @@
     // Menu
     --menu-bg: {{ settings.menu_bg }};
     --menu-color: {{ settings.menu_color }};
+
+    // Botones
+    --button-bg: {{ settings.button_bg}};
+    --button-color: {{ settings.button_color}};
 }
