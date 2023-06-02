@@ -33,7 +33,7 @@
     {% if collection.products.size == 0 %}
       <p>No hay productos</p>
     {% else %}
-      <div class="grid grid-cols lg:cols-{{ item.columns }} gap-2" style="--skin-cols: {{ item.columns }}; --title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
+      <div class="grid grid-cols md:cols-{{ item.columns_laptop }} lg:cols-{{ item.columns_desktop }} gap-2" style="--title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
         {% for product in collection.products limit: length %}
           <div class="card">
             <div class="card__thumb">
@@ -119,6 +119,22 @@
         "max": 6,
         "label": "Productos por fila",
         "default": 6,
+        "step": 1
+      }, {
+        "type": "range",
+        "id": "columns_desktop",
+        "min": 2,
+        "max": 6,
+        "label": "Productos por fila (desktop)",
+        "default": 6,
+        "step": 1
+      }, {
+        "type": "range",
+        "id": "columns_laptop",
+        "min": 2,
+        "max": 6,
+        "label": "Productos por fila (laptop)",
+        "default": 3,
         "step": 1
       }, {
         "type": "header",

@@ -48,6 +48,25 @@ cols {
             --columns: 2;
         }
     }
+    @media (min-width: 768px) {
+        @at-root .md\:#{&} {
+            &-6 {
+                --columns: 6;
+            }
+            &-5 {
+                --columns: 5;
+            }
+            &-4 {
+                --columns: 4;
+            }
+            &-3 {
+                --columns: 3;
+            }
+            &-2 {
+                --columns: 2;
+            }
+        }
+    }
     @media (min-width: 992px) {
         @at-root .lg\:#{&} {
             &-6 {
