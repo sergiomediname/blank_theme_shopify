@@ -8,6 +8,9 @@
 
 {% assign collection = collections[name_collection] %}
 
+
+{% # Container %}
+
 {% assign full_width = item.full_width %}
 {% if full_width %}
   {% assign container = "container-fluid" %}
@@ -30,7 +33,7 @@
     {% if collection.products.size == 0 %}
       <p>No hay productos</p>
     {% else %}
-      <div class="grid gap-2 b:skin-cols" style="--skin-cols: {{ item.columns }}; --title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
+      <div class="grid grid-cols-{{ item.columns }} gap-2" style="--skin-cols: {{ item.columns }}; --title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
         {% for product in collection.products limit: length %}
           <div class="card">
             <div class="card__thumb">
