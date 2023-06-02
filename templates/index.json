@@ -23,7 +23,8 @@
     "products-grid": {
       "type": "index-section-products-grid",
       "settings": {
-        "full_width": false,
+        "full_width": true,
+        "align": "center",
         "title": "Titulo",
         "description": "Descripción",
         "feature_collection": "automated-collection",
@@ -62,6 +63,7 @@
         "617a0c06-1444-4ab7-8603-782ec050e98e"
       ],
       "settings": {
+        "full_width": false,
         "columns": 2,
         "ratio": "16\/9"
       }
