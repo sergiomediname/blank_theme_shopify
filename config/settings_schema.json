@@ -123,7 +123,7 @@
         "type": "range",
         "id": "section_spacing",
         "min": 0,
-        "max": 200,
+        "max": 101,
         "label": "Espaciado de secciones",
         "default": 70,
         "step": 1
