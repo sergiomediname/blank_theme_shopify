@@ -62,7 +62,7 @@
         {% endfor %}
       </div>
       <div>
-        {% if item.button_label %}
+        {% if item.button_label != "" %}
           <a href="{{ collection.url }}" class="btn">{{ item.button_label }}</a>
         {% endif %}
       </div>
