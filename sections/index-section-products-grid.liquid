@@ -8,9 +8,16 @@
 
 {% assign collection = collections[name_collection] %}
 
+{% assign full_width = item.full_width %}
+{% if full_width %}
+  {% assign container = "container-fluid" %}
+{% else %}
+  {% assign container = "container" %}
+{% endif %}
+
 
 <div class="products-section">
-  <div class="{% if item.full_width %}container-fluid{% else %}container{% endif %} text-{{ item.align }}">
+  <div class="{{ container }} text-{{ item.align }}">
     {% if item.title != "" %}
       <h2>{{ item.title }}</h2>
     {% endif %}
@@ -19,7 +26,7 @@
     {% endif %}
   </div>
 
-  <div class="{% if item.full_width %}container-fluid{% else %}container{% endif %}">
+  <div class="{{ container }}">
     {% if collection.products.size == 0 %}
       <p>No hay productos</p>
     {% else %}
