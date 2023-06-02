@@ -33,7 +33,7 @@
     {% if collection.products.size == 0 %}
       <p>No hay productos</p>
     {% else %}
-      <div class="grid grid-cols cols-{{ items.columns_mobile }} md:cols-{{ item.columns_laptop }} lg:cols-{{ item.columns_desktop }} gap-2" style="--title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
+      <div class="grid grid-cols cols-{{ item.columns_mobile }} md:cols-{{ item.columns_laptop }} lg:cols-{{ item.columns_desktop }} gap-2" style="--title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
         {% for product in collection.products limit: length %}
           <div class="card">
             <div class="card__thumb">
