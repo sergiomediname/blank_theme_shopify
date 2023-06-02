@@ -10,7 +10,7 @@
 
 
 <div class="products-section">
-  <div class="container text-{{ item.align }}">
+  <div class="{% if item.full_width %}container-fluid{% else %}container{% endif %} text-{{ item.align }}">
     {% if item.title != "" %}
       <h2>{{ item.title }}</h2>
     {% endif %}
@@ -19,7 +19,7 @@
     {% endif %}
   </div>
 
-  <div class="container{% if item.full_width %}-fluid{% endif %}">
+  <div class="{% if item.full_width %}container-fluid{% else %}container{% endif %}">
     {% if collection.products.size == 0 %}
       <p>No hay productos</p>
     {% else %}
@@ -63,7 +63,8 @@
       {
         "type": "checkbox",
         "id": "full_width",
-        "label": "Sección de ancho completo"
+        "label": "Ancho completo",
+        "default": false
       },
       {
         "type": "select",

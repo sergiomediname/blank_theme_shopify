@@ -1,5 +1,5 @@
 {% assign item = section.settings %}
-<div class="container">
+<div class="{% if item.full_width %}container-fluid{% else %}container{% endif %}">
   <div class="banners grid grid b:skin-cols gap-2" style="--skin-cols: {{ item.columns }}">
     {% for block in section.blocks %}
       {% assign banner = block.settings %}
@@ -27,10 +27,15 @@
 
 {% schema %}
   {
-    "name": "Banner",
+    "name": "Banners",
     "class": "index-section",
     "settings": [
       {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Ancho completo",
+        "default": false
+      }, {
         "type": "range",
         "id": "columns",
         "min": 1,
