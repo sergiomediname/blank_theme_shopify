@@ -67,5 +67,14 @@
         "default": "#000000"
       }
     ]
+  },
+  {
+    "name": "Botones",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Colores"
+      }
+    ]
   }
 ]
