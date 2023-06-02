@@ -65,15 +65,22 @@
         "id": "menu_color",
         "label": "Color Menu",
         "default": "#000000"
-      }
-    ]
-  },
-  {
-    "name": "Botones",
-    "settings": [
+      },
       {
         "type": "header",
-        "content": "Colores"
+        "content": "Botones"
+      },
+      {
+        "type": "color",
+        "id": "button_bg",
+        "label": "Color de fondo",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "button_color",
+        "label": "Color de texto",
+        "default": "#FFFFFF"
       }
     ]
   }
