@@ -33,7 +33,7 @@
     {% if collection.products.size == 0 %}
       <p>No hay productos</p>
     {% else %}
-      <div class="grid grid-cols-{{ item.columns }} gap-2" style="--skin-cols: {{ item.columns }}; --title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
+      <div class="grid grid-cols grid-cols-{{ item.columns }} gap-2" style="--skin-cols: {{ item.columns }}; --title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
         {% for product in collection.products limit: length %}
           <div class="card">
             <div class="card__thumb">
