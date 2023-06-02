@@ -62,6 +62,19 @@
 
       <footer>
         <div class="container">
+          <div>
+            {%- unless shop.enabled_payment_types == empty -%}
+              <span class="visuallyhidden">Supported payment methods</span>
+
+              <ul>
+                {%- for type in shop.enabled_payment_types -%}
+                  <li>
+                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endunless -%}
+          </div>
           © {{ "now" | date: '%Y' }} {{ shop.name }} | Developed by sergiomedina.me
         </div>
       </footer>
