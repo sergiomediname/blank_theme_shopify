@@ -14,20 +14,7 @@
       {{ base_font_bold | font_face: font_display: 'swap' }}
     </style>
     {{ 'theme.css' | asset_url | stylesheet_tag }}
-    <style>
-      {{ settings.button_custom }}
-
-      {% comment %}
-        ($value / 16) + rem;
-      {% endcomment %}
-
-      {% assign test = settings.primary_spacing | divided_by: 16 %}
-
-      :root  {
-        --primary-spacing: {{ test }}
-        rem;
-      }
-    </style>
+    {{ 'customize.css' | asset_url | stylesheet_tag }}
   </head>
 
   <body class="body">
