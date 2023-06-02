@@ -97,5 +97,28 @@
         "info": "Agregar estilos CSS para personalizar los botones"
       }
     ]
+  },
+  {
+    "name": "Espaciados",
+    "settings": [
+      {
+        "type": "range",
+        "id": "primary_spacing",
+        "min": 0,
+        "max": 50,
+        "label": "Espaciado principal",
+        "default": 16,
+        "step": 1
+      },
+      {
+        "type": "range",
+        "id": "secondary_spacing",
+        "min": 0,
+        "max": 50,
+        "label": "Espaciado secundario",
+        "default": 8,
+        "step": 1
+      }
+    ]
   }
 ]
