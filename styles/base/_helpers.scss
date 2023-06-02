@@ -29,22 +29,24 @@
     grid-template-columns: repeat(var(--columns, 1), minmax(0, 1fr));
 }
 
-.cols {
+cols {
+    @at-root .#{&} {
     --columns: 1;
-    &-6 {
-        --columns: 6;
-    }
-    &-5 {
-        --columns: 5;
-    }
-    &-4 {
-        --columns: 4;
-    }
-    &-3 {
-        --columns: 3;
-    }
-    &-2 {
-        --columns: 2;
+        &-6 {
+            --columns: 6;
+        }
+        &-5 {
+            --columns: 5;
+        }
+        &-4 {
+            --columns: 4;
+        }
+        &-3 {
+            --columns: 3;
+        }
+        &-2 {
+            --columns: 2;
+        }
     }
     @media (min-width: 992px) {
         @at-root .lg\:#{&} {
