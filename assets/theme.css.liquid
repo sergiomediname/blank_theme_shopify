@@ -115,9 +115,6 @@ select {
   grid-template-columns: repeat(var(--columns, 1), minmax(0, 1fr));
 }
 
-.cols {
-  --columns: 1;
-}
 .cols-6 {
   --columns: 6;
 }
@@ -132,6 +129,9 @@ select {
 }
 .cols-2 {
   --columns: 2;
+}
+.cols-1 {
+  --columns: 1;
 }
 
 @media (min-width: 768px) {
@@ -149,6 +149,9 @@ select {
   }
   .md\:cols-2 {
     --columns: 2;
+  }
+  .md\:cols-1 {
+    --columns: 1;
   }
 }
 @media (min-width: 992px) {

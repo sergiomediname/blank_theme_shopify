@@ -31,7 +31,6 @@
 
 cols {
     @at-root .#{&} {
-    --columns: 1;
         &-6 {
             --columns: 6;
         }
@@ -46,6 +45,9 @@ cols {
         }
         &-2 {
             --columns: 2;
+        }
+        &-1 {
+            --columns: 1;
         }
     }
     @media (min-width: 768px) {
@@ -64,6 +66,9 @@ cols {
             }
             &-2 {
                 --columns: 2;
+            }
+            &-1 {
+                --columns: 1;
             }
         }
     }
