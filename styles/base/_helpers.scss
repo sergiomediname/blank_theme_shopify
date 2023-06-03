@@ -17,15 +17,21 @@
 }
 
 .b\:skin {
-    &-cols {
-        grid-template-columns: repeat(var(--skin-cols, 4), minmax(0, 1fr));
-    }
-    @media (min-width: 992px) {
-        --skin-cols: var(--skin-cols-lg);
-    }
     &-section-sy {
         padding-top: var(--section-spacing);
         padding-bottom: var(--section-spacing);
+    }
+    &-sy {
+        &-1 {
+            > * + * {
+                margin-top: var(--primary-spacing, 1rem);
+            }
+        }
+        &-2 {
+            > * + * {
+                margin-top: var(--secondary-spacing, 0.5rem);
+            }
+        }
     }
 }
 

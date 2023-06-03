@@ -107,17 +107,15 @@ select {
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 
-.b\:skin-cols {
-  grid-template-columns: repeat(var(--skin-cols, 4), minmax(0, 1fr));
-}
-@media (min-width: 992px) {
-  .b\:skin {
-    --skin-cols: var(--skin-cols-lg);
-  }
-}
 .b\:skin-section-sy {
   padding-top: var(--section-spacing);
   padding-bottom: var(--section-spacing);
+}
+.b\:skin-sy-1 > * + * {
+  margin-top: var(--primary-spacing, 1rem);
+}
+.b\:skin-sy-2 > * + * {
+  margin-top: var(--secondary-spacing, 0.5rem);
 }
 
 .grid-cols {
