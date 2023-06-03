@@ -20,10 +20,15 @@
 
 
 <div class="products-section b:skin-section-sy">
-  <div class="{{ container }}">
-    <div class="title-block text-{{ item.align }}">
+  <div class="{{ container }} b:skin-sy-1">
+    <div class="title-block text-{{ item.align }} b:skin-sy-2">
       {% if item.title != "" %}
-        <h2>{% if item.button_on_title %}<a href="{{ collection.url }}" title="{{ collection.title  }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h2>
+        <h2>
+          {% if item.button_on_title %}
+            <a href="{{ collection.url }}" title="{{ collection.title  }}">{{ item.title }}</a>
+          {% else %}
+            {{ item.title }}{% endif %}
+        </h2>
       {% endif %}
       {% if item.description != "" %}
         <p>{{ item.description }}</p>

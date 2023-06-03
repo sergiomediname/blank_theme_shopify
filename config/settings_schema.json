@@ -107,7 +107,7 @@
         "min": 0,
         "max": 50,
         "label": "Espaciado principal",
-        "default": 16,
+        "default": 32,
         "step": 1
       },
       {
