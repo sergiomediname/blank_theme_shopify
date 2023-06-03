@@ -1,6 +1,27 @@
 <div class="container">
   <!-- Product.liquid v0.1 -->
   <div class="grid grid-cols cols-2">
+    <!-- product-images -->
+    <div class="product-images">
+      {% for image in product.images %}
+
+        {% if forloop.first %}
+
+          <div id="first-image">
+            <a href="{{ image | product_img_url: 'large' }}" title="{{ product.title }}"><img src="{{ image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" /></a>
+          </div>
+
+        {% else %}
+
+          <div class="product-images">
+            <a href="{{ image | product_img_url: 'large' }}" title="{{ product.title }}"><img src="{{ image | product_img_url: 'small' }}" alt="{{ product.title | escape }}" /></a>
+          </div>
+
+        {% endif %}
+
+      {% endfor %}
+    </div>
+    <!-- product-details -->
     <div id="product-details">
       <h2>{{ product.title }}</h2>
       {{ product.description }}
@@ -22,27 +43,6 @@
       {% else %}
         Sorry, the product is not available
       {% endif %}
-    </div>
-    <!-- product-details -->
-
-    <div class="product-images">
-      {% for image in product.images %}
-
-        {% if forloop.first %}
-
-          <div id="first-image">
-            <a href="{{ image | product_img_url: 'large' }}" title="{{ product.title }}"><img src="{{ image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" /></a>
-          </div>
-
-        {% else %}
-
-          <div class="product-images">
-            <a href="{{ image | product_img_url: 'large' }}" title="{{ product.title }}"><img src="{{ image | product_img_url: 'small' }}" alt="{{ product.title | escape }}" /></a>
-          </div>
-
-        {% endif %}
-
-      {% endfor %}
     </div>
   </div>
 
