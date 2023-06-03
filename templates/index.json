@@ -24,12 +24,16 @@
       "type": "index-section-products-grid",
       "settings": {
         "full_width": true,
-        "align": "center",
         "title": "Titulo",
         "description": "Descripción",
+        "align": "center",
         "feature_collection": "automated-collection",
         "limit": "6",
-        "columns": 6,
+        "columns_desktop": 6,
+        "columns_laptop": 3,
+        "columns_mobile": 2,
+        "button_label": "",
+        "button_on_title": true,
         "title_color": "#000000",
         "price_color": "#000000"
       }
