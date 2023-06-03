@@ -23,7 +23,8 @@
     </div>
     <!-- product-details -->
     <div id="product-details">
-      <h2>{{ product.title }}</h2>
+      <h1 class="text-center">{{ product.title }}</h1>
+      <div>{{ product.price }}</div>
       {{ product.description }}
       {% if product.available %}
         <form action="/cart/add" method="post">
