@@ -23,13 +23,13 @@
   <div class="{{ container }}">
     <div class="title-block text-{{ item.align }}">
       {% if item.title != "" %}
-        <h2>{{ item.title }}</h2>
+        <h2>{% if item.button_on_title %}<a href="{{ collection.link }}" title="{{ collection.title  }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h2>
       {% endif %}
       {% if item.description != "" %}
         <p>{{ item.description }}</p>
       {% endif %}
     </div>
-  
+
     <div class="content-block">
       {% if collection.products.size == 0 %}
         <p>No hay productos</p>
