@@ -20,53 +20,53 @@
 
 
 <div class="products-section b:skin-section-sy">
-  <div class="{{ container }} text-{{ item.align }}">
-    {% if item.title != "" %}
-      <h2>{{ item.title }}</h2>
-    {% endif %}
-    {% if item.description != "" %}
-      <p>{{ item.description }}</p>
-    {% endif %}
-  </div>
-
   <div class="{{ container }}">
-    {% if collection.products.size == 0 %}
-      <p>No hay productos</p>
-    {% else %}
-      <div class="grid grid-cols cols-{{ item.columns_mobile }} md:cols-{{ item.columns_laptop }} lg:cols-{{ item.columns_desktop }} gap-2" style="--title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
-        {% for product in collection.products limit: length %}
-          <div class="card">
-            <div class="card__thumb">
-              <img
-                src="{{ product.images.first | image_url: width: 520 }}"
-                loading="lazy"
-                alt="{{ product.title }}"
-                title="{{ product.title }}" />
-              {% if product.images[1] %}
+    <div class="title-block text-{{ item.align }}">
+      {% if item.title != "" %}
+        <h2>{{ item.title }}</h2>
+      {% endif %}
+      {% if item.description != "" %}
+        <p>{{ item.description }}</p>
+      {% endif %}
+    </div>
+  
+    <div class="content-block">
+      {% if collection.products.size == 0 %}
+        <p>No hay productos</p>
+      {% else %}
+        <div class="grid grid-cols cols-{{ item.columns_mobile }} md:cols-{{ item.columns_laptop }} lg:cols-{{ item.columns_desktop }} gap-2" style="--title-color: {{ item.title_color }}; --price-color: {{ item.price_color }}">
+          {% for product in collection.products limit: length %}
+            <div class="card">
+              <div class="card__thumb">
                 <img
-                  src="{{ product.images[1] | image_url: width: 520 }}"
+                  src="{{ product.images.first | image_url: width: 520 }}"
                   loading="lazy"
                   alt="{{ product.title }}"
                   title="{{ product.title }}" />
-              {% endif %}
-            </div>
-            <div class="card__content text-center">
-              <div class="card-wrap">
-                <h1 class="card__title small">
-                  <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
-                </h1>
-                <div class="card__price small">{{ product.price | money }}</div>
+                {% if product.images[1] %}
+                  <img
+                    src="{{ product.images[1] | image_url: width: 520 }}"
+                    loading="lazy"
+                    alt="{{ product.title }}"
+                    title="{{ product.title }}" />
+                {% endif %}
+              </div>
+              <div class="card__content text-center">
+                <div class="card-wrap">
+                  <h1 class="card__title small">
+                    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+                  </h1>
+                  <div class="card__price small">{{ product.price | money }}</div>
+                </div>
               </div>
             </div>
-          </div>
-        {% endfor %}
-      </div>
-      <div>
+          {% endfor %}
+        </div>
         {% if item.button_label != "" %}
           <a href="{{ collection.url }}" class="btn">{{ item.button_label }}</a>
         {% endif %}
-      </div>
-    {% endif %}
+      {% endif %}
+    </div>
   </div>
 </div>
 
@@ -152,6 +152,10 @@
         "id": "button_label",
         "label": "Texto para el botón",
         "info": "Dejar vacío si no se quiere el botón."
+      }, {
+        "type": "checkbox",
+        "id": "button_on_title",
+        "label": "Agregar enlace al título y descripción"
       }, {
         "type": "header",
         "content": "Colores"
