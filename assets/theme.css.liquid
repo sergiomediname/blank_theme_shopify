@@ -457,7 +457,7 @@ h5,
   object-fit: cover;
 }
 
-.offcanvas-switch::before {
+.offcanvas-menu-switch::before {
   content: "";
   position: fixed;
   top: 0;
@@ -469,10 +469,10 @@ h5,
   opacity: var(--switch-bars, 0);
   transition: opacity ease 0.5s;
 }
-.offcanvas-control {
+.offcanvas-menu-control {
   display: none;
 }
-.offcanvas-control:checked + .layout {
+.offcanvas-menu-control:checked + .layout {
   --nav-position: 0;
   --switch-bars: 1;
 }
