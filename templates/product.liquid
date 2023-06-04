@@ -31,7 +31,7 @@
         {% if product.available %}
           <form action="/cart/add" method="post">
             <div id="product-variants">
-              {% assign test = product.selected_or_first_available_variant %}
+              {% assign test = product.selected_variant %}
               <h1>{{ test }}</h1>
               <select id="product-select" name='id'>
                 {% for variant in product.variants %}
