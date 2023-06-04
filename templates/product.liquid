@@ -71,7 +71,7 @@
     variants.addEventListener("change", function(selected) {
       const current_variant = data.variants.filter((variant) => variant.id.toString() === selected.target.value);
 
-      console.log(selected);
+      console.log(selected.target.getAttribute('data-price'));
 
       // getAttribute
       document.querySelector("#product__details h1").innerHTML = current_variant[0].price;
