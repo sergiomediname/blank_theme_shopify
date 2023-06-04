@@ -5,13 +5,13 @@ selector.addEventListener("change", function(event) {
 
 /**
  * Obtener data del producto
- * @param {string} name - Slug del producto
+ * @param {string} slug - Slug del producto
  * @returns {json} Data producto
  */
-function test(name) {
-    console.log(name);
+function test(slug) {
+    console.log(slug);
     var request = new XMLHttpRequest();
-    request.open('GET', window.Shopify.routes.root + 'products/the-complete-snowboard.js', true);
+    request.open('GET', window.Shopify.routes.root + `products/${slug}.js`, true);
     
     request.onload = function() {
       if (request.status >= 200 && request.status < 400) { // Success!
