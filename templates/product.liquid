@@ -78,6 +78,8 @@
         style: 'currency',
         currency: '{{ shop.currency }}'
       }));
+
+      console.log(Shopify.formatMoney(current_variant[0].price, "€ {{ amount }}"))
     });
   });
 </script>
