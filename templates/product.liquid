@@ -13,7 +13,7 @@
           {% if forloop.first %}
 
             <div id="first-image">
-              <a href="{{ image | product_img_url: 'large' }}" title="{{ product.title }}"><img src="{{ image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" /></a>
+              <a href="{{ image | product_img_url: 'large' }}" title="{{ product.title }}"><img src="{{ image | product_img_url: width: 520 }}" alt="{{ product.title | escape }}" /></a>
             </div>
 
           {% else %}
