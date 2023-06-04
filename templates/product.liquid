@@ -60,17 +60,14 @@
 <script>
   window.addEventListener("DOMContentLoaded", async () => {
     const data = await ShopifyBlank.getProductData('{{ product.handle }}');
-    console.log(data);
 
-    const selector = document.getElementById("product-select");
-    selector.addEventListener("change", function(event) {
+    const variants = document.getElementById("product-select");
 
-      // console.log(event.target.value);
+    variants.addEventListener("change", function(selected) {
+      const current_variant = data.variants.filter((variant) => variant.id.toString() === selected.target.value);
+      console.log(current_variant[0].price);
 
-      const test = data.variants.filter((variant) => variant.id.toString() === event.target.value);
-
-      console.log(test[0].price);
-
+      document.querySelector(".product__details h1").innerHTML = current_variant[0].price;
     });
   });
 </script>
