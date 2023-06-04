@@ -14,20 +14,22 @@
    * @param {string} slug - Slug del producto
    * @returns {json} Data producto
    */
-  function getProductData(slug) {
-console.log(slug);
+  const getProductData = (slug) => {
+    let test = '';
 
     fetch(window.Shopify.routes.root + `products/${slug}.js`).then(function (response) {
         // The API call was successful!
         return response.json();
     }).then(function (data) {
         // This is the JSON from our response
-        console.log(data);
+        // console.log(data);
+        test = data;
     }).catch(function (err) {
         // There was an error
         console.warn('Something went wrong.', err);
     });
 
+    return test;
 
     // console.log(slug);
     // if (!slug) {
