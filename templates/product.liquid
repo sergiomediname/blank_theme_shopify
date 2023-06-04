@@ -36,7 +36,7 @@
             <div id="product-variants">
               <select id="product-select" name='id'>
                 {% for variant in product.variants %}
-                  <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                  <option value="{{ variant.id }}" data-price="{{ variant.price | money }}">{{ variant.title }} - {{ variant.price | money }}</option>
                 {% endfor %}
               </select>
             </div>
@@ -73,13 +73,6 @@
       console.log(current_variant[0].price);
 
       document.querySelector("#product__details h1").innerHTML = current_variant[0].price;
-
-      console.log((current_variant[0].price).toLocaleString('es-ES', {
-        style: 'currency',
-        currency: '{{ shop.currency }}'
-      }));
-
-      console.log(Shopify.formatMoney(current_variant[0].price, "€ {{ amount }}"))
     });
   });
 </script>
