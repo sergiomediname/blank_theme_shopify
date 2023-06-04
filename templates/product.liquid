@@ -59,5 +59,7 @@
 
 <script>
   const selector = document.getElementById("product-select");
-  console.log(selector.val);
+  selector.addEventListener("change", function(event) {
+    console.log(event);
+  })
 </script>
