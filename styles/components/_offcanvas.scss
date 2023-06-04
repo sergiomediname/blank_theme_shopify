@@ -23,3 +23,28 @@
         }
     }
 }
+
+.offcanvas {
+    &-control {
+        &:checked {
+            + div {
+                --frame-ty: -1rem;
+            }
+        }
+    }
+}
+.testing {
+    animation: frames .3s both;
+}
+
+@keyframes frames {
+    from {
+        transform: scale(var(--frame-scale,1)) translate(var(--frame-tx,0),var(--frame-ty,0));
+        opacity: var(--frame-opacity, 0)
+    }
+
+    to {
+        transform: scale(1) translate(0);
+        opacity: 1
+    }
+}
