@@ -14,10 +14,10 @@
    * @param {string} slug - Slug del producto
    * @returns {json} Data producto
    */
-  const getProductData = (slug) => {
+  const getProductData = async (slug) => {
     let test = '';
 
-    fetch(window.Shopify.routes.root + `products/${slug}.js`).then(function (response) {
+    await fetch(window.Shopify.routes.root + `products/${slug}.js`).then(function (response) {
         // The API call was successful!
         return response.json();
     }).then(function (data) {
