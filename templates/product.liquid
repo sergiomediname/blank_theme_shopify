@@ -24,14 +24,13 @@
       <!-- product-details -->
       <div id="product__details">
         <h1 class="product__title text-center">{{ product.title }}</h1>
-        <div class="product__price">{{ product.price }}</div>
+        <div class="product__price">{{ product.selected_or_first_available_variant.price | money }}</div>
         <div class="product__description">
           {{ product.description }}
         </div>
         {% if product.available %}
           <form action="/cart/add" method="post">
             <div id="product-variants">
-              <h1>{{ product.selected_or_first_available_variant.price }}</h1>
               <select id="product-select" name='id'>
                 {% for variant in product.variants %}
                   <option value="{{ variant.id }}" data-price="{{ variant.price | money }}">{{ variant.title }} - {{ variant.price | money }}</option>
