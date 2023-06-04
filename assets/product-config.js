@@ -29,7 +29,7 @@
         console.warn('Something went wrong.', err);
     });
 
-    return data;
+    return await data;
 
     // console.log(slug);
     // if (!slug) {
