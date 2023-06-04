@@ -1,15 +1,14 @@
-const selector = document.getElementById("product-select");
-selector.addEventListener("change", function(event) {
-  console.log(event.target.value);
-});
-
 /**
  * Obtener data del producto
  * @param {string} slug - Slug del producto
  * @returns {json} Data producto
  */
 function test(slug) {
-    console.log(slug);
+    if (!slug) {
+        console.error("No asignaste slug");
+        return;
+    }
+
     var request = new XMLHttpRequest();
     request.open('GET', window.Shopify.routes.root + `products/${slug}.js`, true);
     
@@ -29,3 +28,10 @@ function test(slug) {
     
     request.send();
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    const selector = document.getElementById("product-select");
+    selector.addEventListener("change", function(event) {
+      console.log(event.target.value);
+    });
+})
