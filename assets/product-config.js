@@ -15,7 +15,7 @@
    * @returns {json} Data producto
    */
   function getProductData(slug) {
-
+console.log(slug);
 
     // fetch(window.Shopify.routes.root + `products/${slug}.js`).then(function (response) {
     //     // The API call was successful!
