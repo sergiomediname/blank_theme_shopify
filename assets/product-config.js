@@ -40,10 +40,3 @@
 
   return main;
 });
-
-// window.addEventListener("DOMContentLoaded", () => {
-//     const selector = document.getElementById("product-select");
-//     selector.addEventListener("change", function(event) {
-//       console.log(event.target.value);
-//     });
-// })

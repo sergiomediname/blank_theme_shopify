@@ -61,5 +61,10 @@
   window.addEventListener("DOMContentLoaded", async () => {
     const data = await ShopifyBlank.getProductData('{{ product.handle }}');
     console.log(data);
-  })
+
+    const selector = document.getElementById("product-select");
+    selector.addEventListener("change", function(event) {
+      console.log(event.target.value);
+    });
+  });
 </script>
