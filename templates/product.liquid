@@ -58,7 +58,8 @@
   </div>
 </div>
 <script>
-  alert('{{ shop.currency.iso_code }}')
+  alert('{{ shop.currency.iso_code }}');
+  alert('{{ shop.currency }}');
   window.addEventListener("DOMContentLoaded", async () => {
     const data = await ShopifyBlank.getProductData('{{ product.handle }}');
 
