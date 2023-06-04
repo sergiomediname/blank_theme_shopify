@@ -37,9 +37,9 @@
             }
         }
     }
-}
-.testing {
-    animation: frames .3s both;
+    &-content {
+        animation: frames .3s both;
+    }
 }
 
 @keyframes frames {
