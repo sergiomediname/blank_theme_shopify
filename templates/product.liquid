@@ -68,11 +68,12 @@
     const variants = document.getElementById("product-select");
 
     variants.addEventListener("change", function(selected) {
-      const current_variant = data.variants.filter((variant) => variant.id.toString() === selected.target.value);
 
-      console.log(selected.target.selectedOptions[0].getAttribute("data-price"));
+      // const current_variant = data.variants.filter((variant) => variant.id.toString() === selected.target.value);
 
-      document.querySelector("#product__details h1").innerHTML = current_variant[0].price;
+      const selected_price = selected.target.selectedOptions[0].getAttribute("data-price");
+
+      document.querySelector("#product__details h1").innerHTML = selected_price;
     });
   });
 </script>
