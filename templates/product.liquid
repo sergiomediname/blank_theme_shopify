@@ -14,7 +14,7 @@
           {% else %}
 
             <div class="product-images">
-              <a href="{{ image | product_img_url: 'large' }}" title="{{ product.title }}"><img src="{{ image | product_img_url: 'small' }}" alt="{{ product.title | escape }}" /></a>
+              <a href="{{ image | product_img_url: 'large' }}" title="{{ product.title }}"><img src="{{ image | image_url: width: 520 }}" alt="{{ product.title | escape }}" /></a>
             </div>
 
           {% endif %}
