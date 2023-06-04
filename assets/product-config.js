@@ -21,9 +21,9 @@
       return;
     }
 
-    let data = '';
-
+    
     var request = new XMLHttpRequest();
+    let data = '';
     request.open(
       "GET",
       window.Shopify.routes.root + `products/${slug}.js`,
