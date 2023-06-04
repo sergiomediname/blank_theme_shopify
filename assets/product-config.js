@@ -15,6 +15,7 @@
    * @returns {json} Data producto
    */
   function getProductData(slug) {
+    console.log(slug);
     if (!slug) {
       console.error("No asignaste slug");
       return;
@@ -31,7 +32,6 @@
       if (request.status >= 200 && request.status < 400) {
         // Success!
         var data = JSON.parse(request.responseText);
-        // console.log(data);
       } else {
         // We reached our target server, but it returned an error
       }
