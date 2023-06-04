@@ -58,6 +58,7 @@
 </div>
 
 <script>
+  console.log('{{ currency }}');
   window.addEventListener("DOMContentLoaded", async () => {
     const data = await ShopifyBlank.getProductData('{{ product.handle }}');
 
