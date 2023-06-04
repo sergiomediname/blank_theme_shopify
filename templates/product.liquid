@@ -58,9 +58,8 @@
 </div>
 
 <script>
-
   window.addEventListener("DOMContentLoaded", () => {
-    const data = test('{{ product.handle }}');
+    const data = ShopifyBlank.getProductData('{{ product.handle }}');
     console.log(data);
   })
 </script>

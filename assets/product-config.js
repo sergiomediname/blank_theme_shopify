@@ -1,33 +1,55 @@
-/**
- * Obtener data del producto
- * @param {string} slug - Slug del producto
- * @returns {json} Data producto
- */
-function test(slug) {
+(function (global, factory) {
+  typeof exports === "object" && typeof module !== "undefined"
+    ? (module.exports = factory())
+    : typeof define === "function" && define.amd
+    ? define(factory)
+    : ((global =
+        typeof globalThis !== "undefined" ? globalThis : global || self),
+      (global.ShopifyBlank = factory()));
+})(this, function () {
+  "use strict";
+
+  /**
+   * Obtener data del producto
+   * @param {string} slug - Slug del producto
+   * @returns {json} Data producto
+   */
+  function getProductData(slug) {
     if (!slug) {
-        console.error("No asignaste slug");
-        return;
+      console.error("No asignaste slug");
+      return;
     }
 
     var request = new XMLHttpRequest();
-    request.open('GET', window.Shopify.routes.root + `products/${slug}.js`, true);
-    
-    request.onload = function() {
-      if (request.status >= 200 && request.status < 400) { // Success!
+    request.open(
+      "GET",
+      window.Shopify.routes.root + `products/${slug}.js`,
+      true
+    );
+
+    request.onload = function () {
+      if (request.status >= 200 && request.status < 400) {
+        // Success!
         var data = JSON.parse(request.responseText);
         // console.log(data);
-      } else { // We reached our target server, but it returned an error
-    
+      } else {
+        // We reached our target server, but it returned an error
       }
     };
-    
-    request.onerror = function() {
-    
+
+    request.onerror = function () {
       // There was a connection error of some sort
     };
-    
+
     request.send();
-}
+  }
+
+  var main = {
+    getProductData,
+  };
+
+  return main;
+});
 
 // window.addEventListener("DOMContentLoaded", () => {
 //     const selector = document.getElementById("product-select");
