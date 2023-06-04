@@ -62,7 +62,6 @@
 </div>
 
 <script>
-  console.log('{{ currency }}');
   window.addEventListener("DOMContentLoaded", async () => {
     const data = await ShopifyBlank.getProductData('{{ product.handle }}');
 
@@ -71,7 +70,7 @@
     variants.addEventListener("change", function(selected) {
       const current_variant = data.variants.filter((variant) => variant.id.toString() === selected.target.value);
 
-      console.log(selected.target.getAttribute('data-price'));
+      console.log(selected.target);
 
       // getAttribute
       document.querySelector("#product__details h1").innerHTML = current_variant[0].price;
