@@ -15,37 +15,48 @@
    * @returns {json} Data producto
    */
   function getProductData(slug) {
-    console.log(slug);
-    if (!slug) {
-      console.error("No asignaste slug");
-      return;
-    }
+
+
+    fetch(window.Shopify.routes.root + `products/${slug}.js`).then(function (response) {
+        // The API call was successful!
+        console.log('success!', response);
+    }).catch(function (err) {
+        // There was an error
+        console.warn('Something went wrong.', err);
+    });
+
+
+    // console.log(slug);
+    // if (!slug) {
+    //   console.error("No asignaste slug");
+    //   return;
+    // }
 
     
-    var request = new XMLHttpRequest();
-    let data = '';
-    request.open(
-      "GET",
-      window.Shopify.routes.root + `products/${slug}.js`,
-      true
-    );
+    // var request = new XMLHttpRequest();
+    // let data = '';
+    // request.open(
+    //   "GET",
+    //   window.Shopify.routes.root + `products/${slug}.js`,
+    //   true
+    // );
 
-    request.onload = function () {
-      if (request.status >= 200 && request.status < 400) {
-        // Success!
-        data = JSON.parse(request.responseText);
-      } else {
-        // We reached our target server, but it returned an error
-      }
-    };
+    // request.onload = function () {
+    //   if (request.status >= 200 && request.status < 400) {
+    //     // Success!
+    //     data = JSON.parse(request.responseText);
+    //   } else {
+    //     // We reached our target server, but it returned an error
+    //   }
+    // };
 
-    request.onerror = function () {
-      // There was a connection error of some sort
-    };
+    // request.onerror = function () {
+    //   // There was a connection error of some sort
+    // };
 
-    request.send();
+    // request.send();
 
-    return data;
+    // return data;
   }
 
   var main = {
