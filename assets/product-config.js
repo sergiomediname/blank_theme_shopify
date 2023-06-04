@@ -15,54 +15,24 @@
    * @returns {json} Data producto
    */
   const getProductData = async (slug) => {
-    let test = '';
+    let test = "";
 
-    const data = await fetch(window.Shopify.routes.root + `products/${slug}.js`).then(function (response) {
+    const data = await fetch(window.Shopify.routes.root + `products/${slug}.js`)
+      .then(function (response) {
         // The API call was successful!
         return response.json();
-    }).then(function (data) {
+      })
+      .then(function (data) {
         // This is the JSON from our response
-        // console.log(data);
         return data;
-    }).catch(function (err) {
+      })
+      .catch(function (err) {
         // There was an error
-        console.warn('Something went wrong.', err);
-    });
+        console.warn("Something went wrong.", err);
+      });
 
-    return await data;
-
-    // console.log(slug);
-    // if (!slug) {
-    //   console.error("No asignaste slug");
-    //   return;
-    // }
-
-    
-    // var request = new XMLHttpRequest();
-    // let data = '';
-    // request.open(
-    //   "GET",
-    //   window.Shopify.routes.root + `products/${slug}.js`,
-    //   true
-    // );
-
-    // request.onload = function () {
-    //   if (request.status >= 200 && request.status < 400) {
-    //     // Success!
-    //     data = JSON.parse(request.responseText);
-    //   } else {
-    //     // We reached our target server, but it returned an error
-    //   }
-    // };
-
-    // request.onerror = function () {
-    //   // There was a connection error of some sort
-    // };
-
-    // request.send();
-
-    // return data;
-  }
+    return data;
+  };
 
   var main = {
     getProductData,
