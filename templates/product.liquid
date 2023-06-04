@@ -28,9 +28,11 @@
       </div>
       <!-- product-details -->
       <div id="product__details">
-        <h1 class="text-center">{{ product.title }}</h1>
-        <div>{{ product.price }}</div>
-        {{ product.description }}
+        <h1 class="product__title text-center">{{ product.title }}</h1>
+        <div class="product__price">{{ product.price }}</div>
+        <div class="product__description">
+          {{ product.description }}
+        </div>
         {% if product.available %}
           <form action="/cart/add" method="post">
             <div id="product-variants">
@@ -73,7 +75,7 @@
 
       const selected_price = selected.target.selectedOptions[0].getAttribute("data-price");
 
-      document.querySelector("#product__details h1").innerHTML = selected_price;
+      document.querySelector(".product__price").innerHTML = selected_price;
     });
   });
 </script>
