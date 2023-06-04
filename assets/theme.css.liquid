@@ -480,6 +480,9 @@ h5,
 .offcanvas-control:checked + div {
   --frame-ty: -1rem;
 }
+.offcanvas-control:not(:checked) + div {
+  display: none;
+}
 
 .testing {
   animation: frames 0.3s both;

@@ -31,6 +31,11 @@
                 --frame-ty: -1rem;
             }
         }
+        &:not(:checked) {
+            + div {
+                display: none;
+            }
+        }
     }
 }
 .testing {
