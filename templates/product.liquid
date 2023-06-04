@@ -70,8 +70,7 @@
     variants.addEventListener("change", function(selected) {
       const current_variant = data.variants.filter((variant) => variant.id.toString() === selected.target.value);
 
-      console.log(selected.target.selectedOptions[0]);
-      console.log(selected.target.selectedOptions);
+      console.log(selected.target.selectedOptions[0].getAttribute("data-price"));
 
       document.querySelector("#product__details h1").innerHTML = current_variant[0].price;
     });
